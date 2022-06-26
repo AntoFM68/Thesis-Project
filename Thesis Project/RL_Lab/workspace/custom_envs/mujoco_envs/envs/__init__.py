@@ -1,0 +1,2 @@
+from custom_envs.mujoco_envs.envs.deepracer_discrete import Deepracer_discrete
+from custom_envs.mujoco_envs.envs.deepracer_discrete_real import Deepracer_discrete_real

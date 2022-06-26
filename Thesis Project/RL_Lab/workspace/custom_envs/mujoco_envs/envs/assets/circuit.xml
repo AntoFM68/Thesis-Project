@@ -1,0 +1,22 @@
+<mujoco model="deepracer_circuit">
+
+    <compiler angle="radian" inertiafromgeom="true" texturedir="Textures" />
+    <option gravity="0 0 -9.81" timestep="0.002" />
+
+    <worldbody>
+        <light directional="true" diffuse=".8 .8 .8" specular=".2 .2 .2" pos="0 0 5" dir="0 0 -1" />
+        <geom type="plane" material="all_circuits" contype="1" condim="3" friction=".5 0.005 0.0001" rgba="1 1 1 1" size="14.66 11 0.125" />
+        <geom type="plane" material="Gravel" contype="1" condim="3" friction=".5 0.005 0.0001" pos="0 0 -0.01" rgba="1 1 1 1" size="15 15 0.125" />
+    </worldbody>
+
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="0.6 0.6 0.8" rgb2="0.4 0.6 0.8" width="256" height="256" />
+        <texture builtin="gradient" height="100" rgb1=".4 .5 .6" rgb2="0 0 0" type="skybox" width="100" />
+        <texture name="gravel" type="2d" file="gravel.png" />
+        <material name="Gravel" texrepeat="20 20" texture="gravel" />
+
+        <texture name="all" type="2d" file="Tracks.png" />
+        <material name="all_circuits" texture="all" />
+    </asset>
+
+</mujoco>
